@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9. Accordion</title>
+  <style>
+    .accordion { max-width: 600px; margin: 40px auto; }
+    .item { margin-bottom: 10px; border: 1px solid #ccc; border-radius: 6px; }
+    .header { padding: 15px; background: #3498db; color: white; cursor: pointer; }
+    .content { padding: 15px; display: none; background: #f9f9f9; }
+    .active .content { display: block; }
+  </style>
+</head>
+<body>
+  <div class="accordion">
+    <div class="item" onclick="toggle(this)">
+      <div class="header">1-savol: HTML nima?</div>
+      <div class="content">HTML - veb-sahifalarni yaratish uchun ishlatiladigan til.</div>
+    </div>
+    <div class="item" onclick="toggle(this)">
+      <div class="header">2-savol: CSS nima uchun kerak?</div>
+      <div class="content">CSS sahifani chiroyli qilish uchun ishlatiladi.</div>
+    </div>
+  </div>
+
+  <script>
+    function toggle(element) {
+      element.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
